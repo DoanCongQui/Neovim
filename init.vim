@@ -9,7 +9,7 @@ syntax on
 
 call plug#begin('~/.vim/plugged')
   Plug 'joshdick/onedark.vim',                  " Dark theme
-
+  Plug 'dracula/vim', { 'name': 'dracula' }
   " File search
   Plug 'junegunn/fzf', 
     \ { 'do': { -> fzf#install() } }            " Fuzzy finder 
@@ -51,7 +51,8 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
-colorscheme onedark
+" colorscheme onedark
+colorscheme dracula
 
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE

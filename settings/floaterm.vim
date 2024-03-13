@@ -40,5 +40,6 @@ tnoremap <silent> <C-p> <C-\><C-n>:FloatermToggle<CR>
 nnoremap <silent> <leader>tf <C-\><C-n><C-W><Left>
 tnoremap <silent> <leader>tf <C-\><C-n><C-W><Left>
 
+let g:floaterm_keymap_new = '<Leader>ft'
 
 
