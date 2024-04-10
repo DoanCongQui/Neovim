@@ -52,7 +52,7 @@ call plug#end()
 
 
 " colorscheme onedark
-colorscheme dracula
+colorscheme onedark
 
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE

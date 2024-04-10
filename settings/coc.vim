@@ -1,6 +1,8 @@
 " Extensions need to be installed at first startup
 let g:coc_global_extensions = [
       \'coc-json',
+      \'coc-pyright',
+      \'coc-clangd',
       \'coc-vimlsp',
       \]
 
