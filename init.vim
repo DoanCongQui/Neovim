@@ -3,7 +3,7 @@ set mouse=a                 " Enable mouse
 set expandtab               " Tab setting 
 set tabstop=4               " Tab setting 
 set shiftwidth=4            " Tab setting
-set listchars=tab:\¦\       " Tab charactor 
+set listchars=tab:\¦\       " Tab charactor
 
 syntax on
 
@@ -53,6 +53,7 @@ call plug#end()
 
 " colorscheme onedark
 colorscheme onedark
+highlight Normal ctermbg=none guibg=none
 
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE
