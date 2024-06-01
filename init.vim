@@ -19,8 +19,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'voldikss/vim-floaterm'                  " Float terminal
 
   " Status bar
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
 
   " File browser
   Plug 'preservim/nerdTree'                     " File browser  
@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugged')
   " Code syntax highlight
   Plug 'sheerun/vim-polyglot'
   Plug 'uiiaoo/java-syntax.vim'
+  Plug 'jackguo380/vim-lsp-cxx-highlight'
 
   " Source code version control 
   Plug 'tpope/vim-fugitive'                     " Git infomation 
@@ -53,7 +54,7 @@ call plug#end()
 
 " colorscheme onedark
 colorscheme onedark
-highlight Normal ctermbg=none guibg=none
+" highlight Normal ctermbg=none guibg=none
 
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE
