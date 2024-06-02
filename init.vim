@@ -49,6 +49,7 @@ call plug#begin('~/.vim/plugged')
 
   " Debugging
   Plug 'puremourning/vimspector'                " Vimspector
+  Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 call plug#end()
 
 
@@ -59,6 +60,7 @@ colorscheme onedark
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE
 
+let g:coc_global_extensions = ['coc-pyright']
 " Other setting
 for setting_file in split(glob(stdpath('config').'/settings/*.vim'))
   execute 'source' setting_file
