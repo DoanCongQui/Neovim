@@ -2,16 +2,35 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 nnoremap = <C-w>>
 
+" Copy and Cut to clipboard
+nnoremap <C-c> "+y :echo "Text copied to clipboard"<CR>
+vnoremap <C-c> "+y :echo "Text copied to clipboard"<CR>
+nnoremap <C-x> "+d :echo "Text cut to clipboard"<CR>
+vnoremap <C-x> "+d :echo "Text cut to clipboard"<CR>
+
 " Run code C C++ Java HTML Go python
-map <F5> :call CompileRunGcc()<CR>
+map <C-b> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 exec "w"
+
+" Run C 
 if &filetype == 'c'
-exec "!gcc % -o %<"
-exec "!time ./%<"
+exec "!gcc % -o a.out -lm"
+        if v:shell_error
+            echohl ErrorMsg | echom "Compilation failed!" | echohl None
+        else
+            echohl Question | echom "Execution successful!" | echohl None
+        endif
+
+" Run C++
 elseif &filetype == 'cpp'
-exec "!g++ % -o %<"
-exec "!time ./%<"
+exec "!g++ % -o a.out"
+        if v:shell_error
+            echohl ErrorMsg | echom "Compilation failed!" | echohl None
+        else
+            echohl Question | echom "Execution successful!" | echohl None
+        endif
+
 elseif &filetype == 'java'
 exec "!javac %"
 exec "!time java -cp %:p:h %:t:r"
