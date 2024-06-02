@@ -1,5 +1,56 @@
 {
     "languageserver": {
+    // C++
+      "ccls": {
+          "command": "ccls",
+          "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+          "rootPatterns": [".ccls", "compile_commands.json"],
+          "initializationOptions": {
+              "cache": {
+                  "directory": ".ccls-cache",
+                  "format": "binary"
+              },
+              "client": {
+                  "snippetSupport": true
+              },
+              "index": {
+                  "onChange": true
+              },
+              "highlight": {
+                  "lsRanges": true
+              }
+          }
+      },
+    // Python
+      "python.pythonPath": "/home/dq/use_conda_python.sh",
+      "pyright": {
+        "command": "pyright-langserver",
+        "args": ["--stdio"],
+        "filetypes": ["python"],
+        "trace.server": "verbose",
+        "settings": {
+          "python": {
+            "analysis": {
+              "diagnosticMode": "workspace",
+              "typeCheckingMode": "basic",
+              "logLevel": "Information"
+            }
+          }
+        }
+      },   
+    // Cmake 
+      "cmake": {
+          "command": "cmake-language-server",
+          "filetypes": ["cmake"],
+          "rootPatterns": [
+              "build/"
+          ],
+          "initializationOptions": {
+              "buildDirectory": "build"
+          }
+      },
+
+    // Rust
       "rust": {
         "command": "rust-analyzer",
         "filetypes": ["rust"],
@@ -10,6 +61,7 @@
         "command": "bash-language-server",
         "args": ["start"],
         "filetypes": ["sh"]
-      }
-    }
+      },      
+    },
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd"
 }
