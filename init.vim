@@ -50,17 +50,23 @@ call plug#begin('~/.vim/plugged')
   " Debugging
   Plug 'puremourning/vimspector'                " Vimspector
   Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+
+  " Live server
+  Plug 'https://github.com/wolandark/vim-live-server.git'
 call plug#end()
 
 
 " colorscheme onedark
 colorscheme onedark
-" highlight Normal ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
 
 let g:python_highlight_all = 1
 highlight link javaIdentifier NONE
 
 let g:coc_global_extensions = ['coc-pyright']
+
+" autocmd BufWritePost *.html,*.css,*.js silent! :StartBrowserSync
+
 " Other setting
 for setting_file in split(glob(stdpath('config').'/settings/*.vim'))
   execute 'source' setting_file

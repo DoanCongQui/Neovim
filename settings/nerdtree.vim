@@ -1,5 +1,6 @@
 " F5 to toggle 
 map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-M-n> :NERDTreeFocus<CR>
 
 " Open the existing NERDTree on each new tab.
 "autocmd BufWinEnter * silent NERDTreeMirror

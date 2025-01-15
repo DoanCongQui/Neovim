@@ -1,5 +1,9 @@
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
+
+nnoremap <silent> <C-Right> :tabnext<CR>
+nnoremap <silent> <C-Left> :tabprevious<CR>
+
 nnoremap = <C-w>>
 
 " Copy and Cut to clipboard
@@ -8,6 +12,12 @@ vnoremap <C-c> "+y :echo "Text copied to clipboard"<CR>
 nnoremap <C-x> "+d :echo "Text cut to clipboard"<CR>
 vnoremap <C-x> "+d :echo "Text cut to clipboard"<CR>
 
+" Live server
+nmap <F2> :StartLiveServer <CR>
+nmap <F3> :KillLiveServer <CR>
+
+nmap <F2> :StartBrowserSync <CR>
+nmap <F3> :KillBrowserSync <CR>
 " Run code C C++ Java HTML Go python
 map <C-b> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
